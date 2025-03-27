@@ -1,0 +1,43 @@
+.NavBar {
+    text-align: center;
+    background-color: var(--clr-turq1);
+    padding: 1.5%;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+
+    ul {
+        padding: 0;
+        display: flex;
+        margin: 0;
+
+        li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 8px;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 0;
+                height: 2px;
+                background: var(--clr-white);
+                transition: width 0.3s;
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+
+            a {
+                text-decoration: none;
+                font-size: 15px;
+                color: var(--clr-white);
+
+                &:visited {
+                    color: var(--clr-white);
+                }
+            }
+        }
+    }
+}

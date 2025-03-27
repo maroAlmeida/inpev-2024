@@ -1,0 +1,65 @@
+ /* Project Colors */
+ :root {
+     --clr-white: #ffffff;
+     --clr-gray1: #6d6f71;/* cinza textos*/
+     --clr-gray2: #D2D3D4;/* cinza escuro galão */
+     --clr-turq1: #009D96;/* turquesa claro */
+     --clr-turq2: #008177;/* turquesa escuro */
+     --clr-orange: #EC6608;/* laranja escuro */
+     --clr-orange2: #ef8621;/* laranja claro */
+     --clr-orange3: #f7921e;/* laranja claro */
+     --clr-brown: #c36440;/* marrom tijolo */
+     --clr-ocre: #a0a246;/* verde ocre */
+
+     --clr-red: #D74635;
+     --clr-yellow: #DDC154;
+ }
+
+ /*Color class*/
+    ._white {
+        color: var(--clr-white) !important
+    }
+
+    ._turq1 {
+        color: var(--clr-turq1) !important
+    }
+
+    ._turq2 {
+        color: var(--clr-turq2) !important
+    }
+
+    ._orange {
+        color: var(--clr-orange) !important
+    }
+
+    ._orange2 {
+        color: var(--clr-orange2) !important
+    }
+
+    ._gray1 {
+        color: var(--clr-gray1) !important
+    }
+
+    ._brown {
+        color: var(--clr-brown) !important
+    }
+
+    ._ocre {
+        color: var(--clr-ocre) !important
+    }
+
+    ._yellow {
+        color: var(--clr-yellow) !important
+    }
+
+
+* {
+     --tw-shadow: 0 0 transparent;
+     --tw-ring-inset: var(--tw-empty,/*!*//*!*/);
+     --tw-ring-offset-width: 0px;
+     --tw-ring-offset-color: #fff;
+     --tw-ring-color: rgba(59, 130, 246, 0.5);
+     --tw-ring-offset-shadow: 0 0 transparent;
+     --tw-ring-shadow: 0 0 transparent;
+     z-index: 1;
+ }

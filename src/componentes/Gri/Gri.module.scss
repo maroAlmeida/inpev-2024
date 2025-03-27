@@ -1,0 +1,14 @@
+@use '../../assets/styles/variables';
+
+.GRI {
+    line-height: 1;
+    --tw-text-opacity: 1;
+    color: var(--clr-white);
+    background-color: var(--clr-orange);
+    font-size: 9px;
+    letter-spacing: 1;
+    line-height: 23px;
+    padding: 2px;
+    font-weight: 900 !important;
+    font-family: 'Roboto Condensed', sans-serif;
+}

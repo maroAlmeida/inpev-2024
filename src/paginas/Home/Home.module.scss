@@ -1,0 +1,36 @@
+.homeSection {
+
+    .msgPresd {
+        padding: 3% 6.5%;
+        background-size: 100% 100%;
+        background-color: var(--clr-turq1);
+        background-image: url('./img/fnd-msg.jpg');
+    }
+}
+
+.Links {
+    text-align: center;
+    margin: 2.5rem 0;
+}
+
+._msgLink {
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #fff;
+}
+
+@media (min-width: 990px) {
+
+    .homeSection {
+
+        .msgPresd .msgIcon {
+            margin-top: 0px;
+        }
+
+        ._msgLink{
+            margin-top: 30px;
+            display: block;
+        }
+
+    }
+}
