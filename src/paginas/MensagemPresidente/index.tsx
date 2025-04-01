@@ -1,10 +1,10 @@
 import React from 'react';
-import '../../assets/styles/index.scss'; // Importa o CSS global
+// import '../../assets/styles/index.scss'; // Importa o CSS global
 import classNames from 'classnames'; // Importa classnames
 import estilos from './MensagemPresidente.module.scss';
 import presidtImage from './img/foto.jpg';
 import galpaoImage from './img/foto02-g.jpg';
-import IconA from '../../componentes/IconA';
+// import IconA from '../../componentes/IconA';
 
 
 const MensagemPresidente = () => {
@@ -21,7 +21,7 @@ const MensagemPresidente = () => {
                 </div>
 
                 <div className="W-full">
-                    <IconA />
+                    {/* <IconA /> */}
 
                     <p className="desc _gray1">robustez e a efetividade do Sistema Campo Limpo e a sua importância para a agricultura brasileira foram comprovadas mais uma vez em 2023. Seguimos acompanhando a expansão do agro, concluindo as obras de quatro novas centrais de recebimento nos estados de Mato Grosso do Sul, Tocantins e Rio Grande do Sul, que entraram em operação em janeiro e fevereiro de 2024, além de inaugurarmos quatro postos em Minas Gerais e no Pará.
 

@@ -1,0 +1,116 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "_variables.scss";
+@import "_responsive.scss";
+@font-face {
+  font-family: "Cronos Pro";
+  src: url("../../../public/fonts/cronospro/Cronos-Pro_12459.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cronos Pro";
+  src: url("../../../public/fonts/cronospro/Cronos-Pro-Bold_12435.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cronos Pro";
+  src: url("../../../public/fonts/cronospro/Cronos-Pro-Italic_12440.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: "Cronos Pro";
+  src: url("../../../public/fonts/cronospro/Cronos-Pro-Bold-Caption-Italic_12428.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+*{
+  background-repeat: no-repeat;
+}
+
+
+body {
+  margin: 0;
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+}
+
+.cronosFont{
+  font-family: "Cronos Pro", sans-serif;
+}
+
+mobile-only{
+  display: block;
+}
+
+desk-only{
+  display: none;
+}
+
+
+.contentCenter{
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.internalContent{
+  width: 90%;
+  margin: 0 5%;
+}
+
+._upCase{
+  text-transform: uppercase;
+}
+
+._bold7{
+  font-weight: 700;
+}
+
+._fnt45 {
+  font-size: 45px !important;
+}
+
+.op0{
+  opacity: 0;
+}
+
+.tit1 {
+  font-size: 30px;
+  font-weight: 650;
+  margin: 4% 0;
+  line-height: 1.2;
+}
+
+.desc {
+  font-size: 19px;
+  line-height: 1.2;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.msgIcon {
+  width: 70px;
+  margin-right: 10px;
+  float: left;
+}
+
+
+

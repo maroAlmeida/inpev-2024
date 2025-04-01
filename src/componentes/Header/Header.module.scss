@@ -1,0 +1,49 @@
+.header {
+    background-color: var(--clr-turq1);
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 99999999;
+
+    .Container {
+        padding: 10px;
+    }
+
+    .Logo{
+        width: 158px;
+        height: auto;
+    }
+
+    .title {
+        color: var(--clr-turq1);
+        font-size: 20px;
+        text-transform: uppercase;
+        text-align: center;
+
+        span {
+            color: var(--clr-orange);
+        }
+    }
+
+    .line2{
+        background-color: var(--clr-turq1);
+
+        a.downA{
+            display: block;
+            margin: auto;
+            width: 140px;
+            font-weight: 600;
+
+            .download{
+                display: flex;
+            }
+        }
+    }
+
+    
+
+    .Descricao {
+        font-size: 15px;
+    }
+
+}

@@ -8,24 +8,4 @@
     align-items: center;
     padding: 10px;
 
-    ul {
-        padding: 0;
-
-        li {
-            display: inline-block;
-            margin: 0px 5px;
-
-            i {
-                width: 36px;
-                height: 36px;
-                display: inline-block;
-                text-align: center;
-                line-height: 36px !important;
-                background-color: #fff;
-                border-radius: 50%;
-                color: var(--clr-turq1);
-                transition: all 0.5s;
-            }
-        }
-    }
 }

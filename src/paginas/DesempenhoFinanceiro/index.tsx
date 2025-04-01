@@ -1,11 +1,11 @@
 import React from 'react';
-import '../../assets/styles/index.scss'; // Importa o CSS global
+// import '../../assets/styles/globals.scss'; // Importa o CSS global
 import classNames from 'classnames'; // Importa classnames
 import estilos from './DesempenhoFinanceiro.module.scss';
 import bannerDesktop from './img/banner.jpg';
 import bannerMobile from './img/banner.jpg';
 import foto from './img/foto.png';
-import IconO from '../../componentes/IconO';
+// import IconO from '../../componentes/IconO';
 
 
 const DesempenhoFinanceiro = () => {
@@ -22,7 +22,7 @@ const DesempenhoFinanceiro = () => {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
                     <div className="">
-                        <IconO />
+                        {/* <IconO /> */}
 
                         <p className="desc _gray1">s repasses financeiros das fabricantes associadas e do canal de distribuição (associações e cooperativas), as taxas de credenciamento pagas pelos recicladores e o valor recebido pelo arrendamento da Campo Limpo Reciclagem e Transformação de Plásticos S.A. constituem a receita do inpEV, que não recebe apoio financeiro do governo ou de agências de crédito.</p>
 
