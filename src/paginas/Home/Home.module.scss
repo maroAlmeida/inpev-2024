@@ -1,26 +1,110 @@
 .homeSection {
 
-    background-image: url(./img/foto1.jpg);
-    background-size: 100% auto;
+    
+    .homeBg{
+        background-image: url(./img/foto1.jpg);
+        background-size: cover ;
+        position: relative;
+    }
 
-    .msgPresd {
-        padding: 3% 6.5%;
-        background-size: 100% 100%;
-        background-color: var(--clr-turq1);
-        background-image: url('./img/fnd-msg.jpg');
+    .homeContent {
+        width: 100%;
+        position: relative;
+        z-index: 2;
+
+        .relativeNov {
+            overflow: hidden;
+        }
+
+        .title1 {
+            font-size: 60px;
+            font-family: "Cronos Pro", sans-serif;
+            font-weight: 600;
+            line-height: 0.9;
+            letter-spacing: 0px;
+
+            span {
+                color: var(--clr-orange);
+            }
+        }
+
+        .boxOrange {
+            width: 202px;
+            height: 416px;
+            padding: 8%;
+            color: var(--clr-orange);
+            border-left: solid 3px var(--clr-turq1);
+            border-top: solid 3px var(--clr-turq1);
+            border-top-left-radius: 20px;
+
+            h1{
+                width: 146px;
+                font-weight: 500;
+                font-size: 20px;
+                text-transform: uppercase;
+            }
+        }
+
+        .boxGreen {
+            width: 311px;
+            height: 370px;
+            padding: 5%;
+            border: solid 3px var(--clr-turq1);
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            color: black;
+            background-color: #fff;
+
+            h1{
+                width: 229px;
+                font-weight: 500;
+                font-size: 20px;
+                text-transform: uppercase;
+                display: block;
+                margin: auto;
+            }
+        }
+
+        .filetGreen{
+            height: 100%;
+            border-right: solid 3px var(--clr-turq1);
+            float: left;
+        }
+
+
+        .linePresd{
+            background-color: rgba($color: #009D96, $alpha: 0.8);
+            padding: 3%;
+
+            .msgPresd {
+                font-family: "Cronos Pro", sans-serif;
+                text-align: center;
+                color: #000;
+                
+                p{
+                    font-size: 16px;
+                }
+
+                .msgTitle{
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+
+                .msgTxt{
+                    font-style: italic;
+                    font-weight: 600;
+                }
+
+                .msgLink{
+                    text-decoration: underline;
+                }
+            }
+        }
+
     }
 }
 
-.Links {
-    text-align: center;
-    margin: 2.5rem 0;
-}
 
-._msgLink {
-    text-transform: uppercase;
-    text-decoration: underline;
-    color: #fff;
-}
 
 @media (min-width: 990px) {
 
@@ -30,9 +114,23 @@
             margin-top: 0px;
         }
 
-        ._msgLink{
+        ._msgLink {
             margin-top: 30px;
             display: block;
+        }
+
+    }
+}
+
+@media (min-width: 1190px) {
+
+    .homeSection {
+
+        .relativeNov {
+            width: 90%;
+            padding-top: 2%;
+            display: block;
+            margin: auto;
         }
 
     }
