@@ -1,5 +1,4 @@
-.Rodape {
-    // margin-top: 2.5rem;
+.footer {
     border-top: solid 3px var(--clr-turq1);
     background-color: #fff;
     display: flex;
@@ -10,7 +9,7 @@
 }
 
 @media (min-width: 1020px) {
-    .Rodape {
+    .footer {
         background-color: var(--clr-turq1);
         color: #fff;
     }

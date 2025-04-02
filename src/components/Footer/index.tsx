@@ -1,12 +1,12 @@
 import LogoBco from '../LogoBco';
 import SocialList from '../SocialList';
-import estilos from './Rodape.module.scss';
+import styles from './Footer.module.scss';
 
-const NavBar = () => {
+const Footer = () => {
   return (
-    <footer className={estilos.Rodape}>
+    <footer className={styles.footer}>
       <div className='desktop-only' >
-        <LogoBco localClass={estilos.footerLogo} />
+        <LogoBco localClass={styles.footerLogo} />
       </div>
       <div className='mobile-only' >
         <SocialList />
@@ -15,4 +15,4 @@ const NavBar = () => {
   )
 }
 
-export default NavBar
+export default Footer

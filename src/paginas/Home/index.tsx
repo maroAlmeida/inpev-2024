@@ -14,6 +14,9 @@ const items = [
 const text1 = "Gestor do Sistema Campo Limpo, programa brasileiro de logística reversa de embalagens vazias de defensivos agrícolas";
 const text2 = "Introdução nam a nimus, conecab oribus restorr umquisqui ullibearum debis dolore, a num volum utae. Itam re vendaector sam voloremquia sam facea voluptaquis aut ulli bearum de";
 
+const trigoPerct = "50%";
+const trigoLeg = "Postem lam a nimus, conecab oribus restorr umquisqui";
+
 function HomePage() {
   const [hovered, setHovered] = useState<number | null>(null);
 
@@ -67,7 +70,7 @@ function HomePage() {
       </div>{/* /homeContent */}
 
       {/* /Home Temas Materiais */}
-      <div className={`${styles.homeContent} ${styles.homeBgLeads}`} >
+      <div className={`${styles.homeContent} ${styles.homeBgLeads} `} >
         <div className={` ${styles.temasMateriais} relativeNov `} >
           <div>
             <p className={styles.tmTitle} >Temas materiais - destaques</p>
@@ -76,44 +79,62 @@ function HomePage() {
             {/* Row Leads icons */}
             <div className={`${styles.leadsBox} w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4`} >
 
+              {/* Box 1 */}
               <Link to="#">
                 <div className={styles.box1} >
                   <p>Les excearcimus autate cor aut harionemquam  aliquam, ent omnis desti derm ipitiatur sanimus  as aliquam.</p>
-                  <img className={styles.lead} src='./img/base/lead.svg' alt='lead' />
+                  <div className={styles.lead} ></div>
                   <div className={styles.box1Fil} ></div>
                 </div>
               </Link>
 
+              {/* Box 2 */}
               <Link to="#">
                 <div className={styles.box2} >
-                  <div className={styles.trigo} >
-                    <p>50%</p>
-                    <img className={styles.trigoLead} src='./img/home/trigo.svg' alt='lead' />
+                  <div className="desk-only vh100" >
+                    <div className={styles.trigo} >
+                      <p className={styles.percent} >{trigoPerct}</p>
+                      <img src="./img/home/trigo.svg" alt="trigo" />
+                    </div>
+                    <div className={styles.box2Fil} >
+                      <div className={styles.lead} ></div>
+                    </div>
+                    <div className={styles.box2Fil2} ></div>
+                    <p className={styles.content} >{trigoLeg}</p>
                   </div>
-                  <div className={styles.box2Fil} >
-                    <img className={styles.lead} src='./img/base/lead.svg' alt='lead' />
+
+                  <div className="mobile-only" >
+                    <div className="flex" >
+                      <div>
+                        <p className={styles.percent} >{trigoPerct}</p>
+                        <p className={styles.content} >{trigoLeg}</p>
+                      </div>
+                      <div className={styles.lead} ></div>
+                    </div>
                   </div>
-                  <div className={styles.box2Fil2} ></div>
-                  <p className={styles.content} >Postem lam a nimus, conecab oribus restorr umquisqui</p>
                 </div>
               </Link>
 
+              {/* Box 3 */}
               <Link to="#">
                 <div className={styles.box3} >
                   <p>Les excearcimus autate cor aut harionemquam  aliquam, ent omnis desti derm ipitiatur sanimus  as aliquam.</p>
-                  <img className={styles.lead} src='./img/base/lead.svg' alt='lead' />
+                  <div className={styles.lead} ></div>
                   <div className={styles.box3Fil} ></div>
                 </div>
               </Link>
 
+              {/* Box 4 */}
               <Link to="#">
                 <div className={styles.box4} >
                   <div className={styles.flower} >
                     <p>Postem lam a nimus, conecab oribus restorr umquisqui</p>
                   </div>
 
+                  <div className={` ${styles.box4Fil2} mobile-only `} ></div>
+
                   <div className={styles.box4Fil} >
-                    <img className={styles.lead} src='./img/base/lead.svg' alt='lead' />
+                    <div className={styles.lead} ></div>
                   </div>
                 </div>
               </Link>
@@ -121,7 +142,7 @@ function HomePage() {
             </div>
 
             {/* Row Leads Rdp */}
-            <div className={`${styles.tmBxRdp} w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4`}>
+            <div className={`${styles.tmBxRdp} w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 `}>
               {items.map((item) => (
                 <Link
                   to="#"
