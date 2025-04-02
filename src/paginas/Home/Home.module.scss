@@ -147,6 +147,7 @@
                 padding: 10%;
                 overflow: hidden;
                 position: relative;
+                background-color: transparent;
 
                 p {
                     color: #000;
@@ -156,6 +157,14 @@
                     margin: auto;
                     width: 90%;
                 }
+            }
+
+            .box1:hover,
+            .box2:hover,
+            .box3:hover,
+            .box4:hover{
+                transform: scale(1.06);
+                background-color: rgb( 202, 202, 202, 0.5);
             }
 
             .box1 {
@@ -219,7 +228,7 @@
 
                 .box2Fil2 {
                     width: 50%;
-                    height: 30px;
+                    height: 20px;
                     border-left: solid 3px var(--clr-ocre);
                     border-top: solid 3px var(--clr-ocre);
                     border-top-left-radius: 20px;
@@ -261,7 +270,7 @@
                 .flower {
                     background-image: url(./img/cilios.svg);
                     background-position: center;
-                    background-size: cover;
+                    background-size: 94%;
                     padding: 6.7%;
 
                     p {
@@ -299,22 +308,29 @@
 
             .itemRdp {
                 background-image: url('./img/tmFndRdp.png');
-                background-size: 100% 100%;
+                background-size: 100% auto;
                 background-position: left top;
                 padding: 20px 0 30px 30px;
+                transform: scale(0.9);
 
                 p {
                     font-size: 20px;
+                    font-weight: 600;
                     line-height: 1;
-                    margin-top: 40px;
+                    margin-top: 15px;
                     width: 90%;
+                    height: 90px;
                     // background-color: pink;
 
                     span {
                         font-size: 60px;
-                        font-weight: 600;
+                        font-weight: 700;
                     }
                 }
+
+            }
+            .itemRdp:hover{
+                transform: scale(1.06);
             }
         }
 

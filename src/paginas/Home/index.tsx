@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import styles from './Home.module.scss';
 import '../../assets/styles/globals.scss';
 import NextPage from '../../componentes/NextPage';
 
-
+const items = [
+  { id: 1, percentage: "75%", text: "Postem lam a nimus, conecab oribus restorr." },
+  { id: 2, percentage: "", text: "Postem lam a nimus, conecab oribus restorr umquisqui." },
+  { id: 3, percentage: "", text: "Utad quam et aliam,  urios serum doluptat Debit lacesti tem" },
+  { id: 4, percentage: "90%", text: "Nam vendis is ma doloratusa dit peditiu. " },
+];
 
 function HomePage() {
+  const [hovered, setHovered] = useState<number | null>(null);
+
   return (
     <div className={styles.homeSection} >
 
@@ -101,32 +108,26 @@ function HomePage() {
             </div>
 
             {/* Row Leads Rdp */}
-            <div className={`${styles.tmBxRdp} w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4`}  >
-
-              <Link to="#">
-                <div className={styles.itemRdp} >
-                  <p className='text-white' ><span>75%</span><br />Postem lam a nimus, conecab oribus restorr.</p>
-                </div>
-              </Link>
-
-              <Link to="#">
-                <div className={styles.itemRdp} >
-                  <p className='text-white' ><span>75%</span><br />Postem lam a nimus, conecab oribus restorr.</p>
-                </div>
-              </Link>
-
-              <Link to="#">
-                <div className={styles.itemRdp} >
-                  <p className='text-white' ><span>75%</span><br />Postem lam a nimus, conecab oribus restorr.</p>
-                </div>
-              </Link>
-
-              <Link to="#">
-                <div className={styles.itemRdp} >
-                  <p className='text-white' ><span>75%</span><br />Postem lam a nimus, conecab oribus restorr.</p>
-                </div>
-              </Link>
-
+            <div className={`${styles.tmBxRdp} w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4`}>
+              {items.map((item) => (
+                <Link
+                  to="#"
+                  key={item.id}
+                  onMouseEnter={() => setHovered(item.id)}
+                  onMouseLeave={() => setHovered(null)}
+                >
+                  <div
+                    className={`${styles.itemRdp} transition-opacity duration-300`}
+                    style={{ opacity: hovered === null || hovered === item.id ? 1 : 0.9 }}
+                  >
+                    <p className="text-white">
+                      {item.percentage && <span>{item.percentage}</span>}
+                      <br />
+                      {item.text}
+                    </p>
+                  </div>
+                </Link>
+              ))}
             </div>
 
           </div>
