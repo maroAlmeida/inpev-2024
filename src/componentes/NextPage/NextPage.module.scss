@@ -1,0 +1,24 @@
+@use '../../assets/styles/variables';
+
+.pageNext{
+    width: 200px;
+    display: block;
+    margin-left: 82.5%;
+    // outline: solid 1px blue;
+
+    p{
+        color: var(--clr-turq1);
+        font-size: 24px;
+        font-weight: 600;
+    }
+    
+    .iconNext{
+        width: 30px;
+        height: 30px;
+        margin-left: 15px;
+    }
+
+    :hover{
+        opacity: 0.5;
+    }
+}
