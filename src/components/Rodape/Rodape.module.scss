@@ -1,0 +1,17 @@
+.Rodape {
+    // margin-top: 2.5rem;
+    border-top: solid 3px var(--clr-turq1);
+    background-color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+}
+
+@media (min-width: 1020px) {
+    .Rodape {
+        background-color: var(--clr-turq1);
+        color: #fff;
+    }
+}

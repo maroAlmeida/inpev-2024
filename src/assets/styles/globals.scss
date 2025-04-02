@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 @import "_variables.scss";
-@import "_responsive.scss";
+
 @font-face {
   font-family: "Cronos Pro";
   src: url("../../../public/fonts/cronospro/Cronos-Pro_12459.ttf") format("truetype");
@@ -55,11 +55,16 @@ body {
   font-family: "Cronos Pro", sans-serif;
 }
 
-mobile-only{
+.mobile-only, .desk-only{
+  position: relative;
+  width: 100%;
+}
+
+.mobile-only{
   display: block;
 }
 
-desk-only{
+.desk-only{
   display: none;
 }
 
@@ -70,9 +75,11 @@ desk-only{
   overflow: hidden;
 }
 
+.relativeNov,
 .internalContent{
   width: 90%;
   margin: 0 5%;
+  overflow: hidden;
 }
 
 ._upCase{
@@ -110,6 +117,5 @@ desk-only{
   margin-right: 10px;
   float: left;
 }
-
 
 

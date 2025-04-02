@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import styles from './Home.module.scss';
 import '../../assets/styles/globals.scss';
-import NextPage from '../../componentes/NextPage';
+import NextPage from '../../components/NextPage';
 
 const items = [
   { id: 1, percentage: "75%", text: "Postem lam a nimus, conecab oribus restorr." },
@@ -10,6 +10,9 @@ const items = [
   { id: 3, percentage: "", text: "Utad quam et aliam,  urios serum doluptat Debit lacesti tem" },
   { id: 4, percentage: "90%", text: "Nam vendis is ma doloratusa dit peditiu. " },
 ];
+
+const text1 = "Gestor do Sistema Campo Limpo, programa brasileiro de logística reversa de embalagens vazias de defensivos agrícolas";
+const text2 = "Introdução nam a nimus, conecab oribus restorr umquisqui ullibearum debis dolore, a num volum utae. Itam re vendaector sam voloremquia sam facea voluptaquis aut ulli bearum de";
 
 function HomePage() {
   const [hovered, setHovered] = useState<number | null>(null);
@@ -19,22 +22,32 @@ function HomePage() {
 
       {/* /Home Banner */}
       <div className={`${styles.homeContent} ${styles.homeBg}`} >
-        <div className={styles.relativeNov} >
-          <div className="w-full p-4" >
+        <div className="relativeNov" >
+          <div className="w-full py-4 desk-only" >
             <p className={`${styles.title1} cronosFont text-black bold`} >
               Relatório de sustentabilidade
               <br /><span>2024</span>
             </p>
           </div>
 
+          {/* <div className="mobile-only w-full gap-4" ></div> */}
+
           <div className="w-full grid grid-cols-1 md:grid-cols-[1fr_2fr_1fr] gap-4 ">
             <div className={styles.boxOrange} >
-              <h1>Gestor do Sistema Campo Limpo, programa brasileiro de logística reversa de embalagens vazias de defensivos agrícolas</h1>
+              <h1>{text1}</h1>
             </div>
-            <div className='' >&nbsp;</div>
+
+            <div className='desk-only' >&nbsp;</div>
+            <div className="w-full px-4 mobile-only" >
+              <p className={`${styles.title1} cronosFont text-black bold`} >
+                Relatório de sustentabilidade
+                <br /><span>2024</span>
+              </p>
+            </div>
+
             <div>
               <div className={styles.boxGreen} >
-                <h1>Introdução nam a nimus, conecab oribus restorr umquisqui ullibearum debis dolore, a num volum utae. Itam re vendaector sam voloremquia sam facea voluptaquis aut ulli bearum de</h1>
+                <h1>{text2}</h1>
               </div>
               <div className={styles.filetGreen} ></div>
             </div>
@@ -55,7 +68,7 @@ function HomePage() {
 
       {/* /Home Temas Materiais */}
       <div className={`${styles.homeContent} ${styles.homeBgLeads}`} >
-        <div className={`${styles.relativeNov} ${styles.temasMateriais} `} >
+        <div className={` ${styles.temasMateriais} relativeNov `} >
           <div>
             <p className={styles.tmTitle} >Temas materiais - destaques</p>
             <div className={styles.tmPdts} ></div>
@@ -134,8 +147,11 @@ function HomePage() {
         </div>
       </div>
 
-      <div className={`${styles.relativeNov} w-full p-4`} >
-        <NextPage linkText="apresentacao" namePage="Apresentação" />
+      {/* /Next Page */}
+      <div className="relativeNov py-4" >
+        <div className="float-right text-right" >
+          <NextPage linkText="apresentacao" namePage="Apresentação" />
+        </div>
       </div>
     </div>
   );

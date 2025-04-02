@@ -1,10 +1,10 @@
 @media (min-width: 990px) {
 
-    mobile-only {
+    .mobile-only {
         display: none;
     }
 
-    desk-only {
+    .desk-only {
         display: block;
     }
 
@@ -32,17 +32,10 @@
 
 
 .contentCenter {
-    padding-top: 137px; /* Padrão para telas médias */
+    padding-top: 160px; /* Padrão para telas médias */
 
-    @media (max-width: 1024px) {
-        padding-top: 80px; /* Ajuste para telas menores */
+    @media (min-width: 1024px) {
+        padding-top: 137px; /* Padrão para telas médias */ /* Ajuste para telas menores */
     }
 
-    @media (max-width: 768px) {
-        padding-top: 100px; /* Ajuste para telas pequenas */
-    }
-
-    @media (max-width: 480px) {
-        padding-top: 120px; /* Ajuste para telas muito pequenas */
-    }
 }

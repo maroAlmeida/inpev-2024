@@ -1,9 +1,9 @@
 .homeSection {
 
-
     .homeBg {
-        background-image: url(./img/foto1.jpg);
-        background-size: cover;
+        background-image: url(./img/foto1-mb.jpg);
+        background-size: 100% auto;
+        background-position-y: 140px;
         position: relative;
     }
 
@@ -19,16 +19,14 @@
         position: relative;
         z-index: 2;
 
-        .relativeNov {
-            overflow: hidden;
-        }
-
         .title1 {
-            font-size: 60px;
+            font-size: 32px;
             font-family: "Cronos Pro", sans-serif;
             font-weight: 600;
             line-height: 0.9;
             letter-spacing: 0px;
+            text-align: center;
+            margin: 40px auto 0;
 
             span {
                 color: var(--clr-orange);
@@ -36,48 +34,32 @@
         }
 
         .boxOrange {
-            width: 202px;
-            height: 416px;
-            padding: 8%;
+            padding: 4%;
             color: var(--clr-orange);
-            border-left: solid 3px var(--clr-turq1);
-            border-top: solid 3px var(--clr-turq1);
-            border-top-left-radius: 20px;
+            text-align: center;
 
             h1 {
-                width: 146px;
                 font-weight: 500;
-                font-size: 20px;
+                font-size: 18px;
                 text-transform: uppercase;
             }
         }
 
         .boxGreen {
-            width: 311px;
-            height: 370px;
-            padding: 5%;
-            border: solid 3px var(--clr-turq1);
-            border-top-left-radius: 20px;
-            border-bottom-right-radius: 20px;
+            padding: 0 5% 5% 5%;
             color: black;
-            background-color: #fff;
+            display: block;
+            margin: auto;
 
             h1 {
-                width: 229px;
+                font-size: 18px;
                 font-weight: 500;
-                font-size: 20px;
+                text-align: center;
                 text-transform: uppercase;
                 display: block;
                 margin: auto;
             }
         }
-
-        .filetGreen {
-            height: 100%;
-            border-right: solid 3px var(--clr-turq1);
-            float: left;
-        }
-
 
         .linePresd {
             background-color: rgba($color: #009D96, $alpha: 0.8);
@@ -339,18 +321,74 @@
 
 
 
-@media (min-width: 990px) {
+@media (min-width: 1020px) {
 
     .homeSection {
 
-        .msgPresd .msgIcon {
-            margin-top: 0px;
+        .homeBg {
+            background-image: url(./img/foto1.jpg);
+            background-size: cover;
+            background-position-y: 0;
         }
 
-        ._msgLink {
-            margin-top: 30px;
-            display: block;
+        .homeContent{
+
+            .title1 {
+                font-size: 60px;
+                text-align: left;
+                margin-top: 0;
+            }
+
+            .boxOrange {
+                width: 202px;
+                height: 416px;
+                padding: 8%;
+                border-left: solid 3px var(--clr-turq1);
+                border-top: solid 3px var(--clr-turq1);
+                border-top-left-radius: 20px;
+    
+                h1 {
+                    width: 146px;
+                    font-weight: 500;
+                    font-size: 20px;
+                }
+            }
+    
+            .boxGreen {
+                width: 311px;
+                height: 370px;
+                padding: 5%;
+                border: solid 3px var(--clr-turq1);
+                border-top-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                color: black;
+                background-color: #fff;
+    
+                h1 {
+                    width: 229px;
+                    font-weight: 500;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    display: block;
+                    margin: auto;
+                }
+            }
+    
+            .filetGreen {
+                height: 100%;
+                border-right: solid 3px var(--clr-turq1);
+                float: left;
+            }
         }
+
+        // .msgPresd .msgIcon {
+        //     margin-top: 0px;
+        // }
+
+        // ._msgLink {
+        //     margin-top: 30px;
+        //     display: block;
+        // }
 
     }
 }

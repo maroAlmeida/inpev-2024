@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 import './assets/styles/globals.scss';
 // import ScrollToTop from './componentes/ScrollToTop';
-import Header from './componentes/Header';
-import Rodape from './componentes/Rodape';
+import Header from './components/Header';
+import Rodape from './components/Rodape';
 import Home from './paginas/Home';
 import Apresentacao from './paginas/Apresentacao';
 import MensagemPresidente from './paginas/MensagemPresidente';

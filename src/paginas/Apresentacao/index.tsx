@@ -1,5 +1,5 @@
 import React from 'react';
-import GRI from '../../componentes/Gri';
+import GRI from '../../components/Gri';
 // import '../../assets/styles/index.scss'; // Importa o CSS global
 import classNames from 'classnames'; // Importa classnames
 import estilos from './Apresentacao.module.scss';
