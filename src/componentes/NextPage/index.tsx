@@ -10,10 +10,10 @@ interface DynamicTextProps {
 const NextPage: React.FC<DynamicTextProps> = ({ linkText, namePage }) => {
   return (
     <>
-      <Link className={styles.pageNext} to={`/{linkText}`}>
+      <Link className={styles.pageNext} to={`/${linkText}`}>
         <div className='flex' >
           <p >{namePage}</p>
-          <img className={styles.iconNext} src='/img/base/iconNextPg.svg' alt="próxima página" />
+          <img className={styles.iconNext} src='./img/base/iconNextPg.svg' alt="próxima página" />
         </div>
 
       </Link>

@@ -5,7 +5,10 @@ import SocialList from '../SocialList';
 import NavBar from '../NavBar';
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [menuAberto, setMenuAberto] = useState(false);
+
+  const toggleMenu = () => setMenuAberto(!menuAberto);
+  const fecharMenu = () => setMenuAberto(false); // Função para fechar o menu
 
   return (
     <section className={styles.header}>
@@ -26,20 +29,20 @@ const Header = () => {
           {/* Botão hambúrguer com texto "Menu" */}
           <button
             className="flex items-center gap-2 text-white"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={toggleMenu}
           >
             <span>Menu</span>
             <div className="relative w-6 h-4 flex flex-col justify-between">
               <div
-                className={`w-6 h-0.5 bg-white transition-transform duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''
+                className={`w-6 h-0.5 bg-white transition-transform duration-300 ${menuAberto ? 'rotate-45 translate-y-2' : ''
                   }`}
               ></div>
               <div
-                className={`w-6 h-0.5 bg-white transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : ''
+                className={`w-6 h-0.5 bg-white transition-opacity duration-300 ${menuAberto ? 'opacity-0' : ''
                   }`}
               ></div>
               <div
-                className={`w-6 h-0.5 bg-white transition-transform duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''
+                className={`w-6 h-0.5 bg-white transition-transform duration-300 ${menuAberto ? '-rotate-45 -translate-y-2' : ''
                   }`}
               ></div>
             </div>
@@ -50,7 +53,7 @@ const Header = () => {
         <div>
           <a className={styles.downA} href="./assets/download/#" target="_blank">
             <div className={`${styles.download} gap-2 text-white`}>
-              <img src="/img/header/download.svg" alt="logo" />
+              <img src="./img/header/download.svg" alt="logo" />
               PDF completo
             </div>
           </a>
@@ -65,8 +68,8 @@ const Header = () => {
       </div>
 
       {/* Passando o estado para o NavBar */}
-      <div className={`transition-all duration-300 ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
-        <NavBar isOpen={isMenuOpen} />
+      <div className={`transition-all duration-300 ${menuAberto ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
+        <NavBar isOpen={menuAberto} fecharMenu={fecharMenu} />
       </div>
     </section>
   );

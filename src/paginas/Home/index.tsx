@@ -59,7 +59,7 @@ function HomePage() {
               <Link to="#">
                 <div className={styles.box1} >
                   <p>Les excearcimus autate cor aut harionemquam  aliquam, ent omnis desti derm ipitiatur sanimus  as aliquam.</p>
-                  <img className={styles.lead} src='/img/base/lead.svg' alt='lead' />
+                  <img className={styles.lead} src='./img/base/lead.svg' alt='lead' />
                   <div className={styles.box1Fil} ></div>
                 </div>
               </Link>
@@ -68,10 +68,10 @@ function HomePage() {
                 <div className={styles.box2} >
                   <div className={styles.trigo} >
                     <p>50%</p>
-                    <img className={styles.trigoLead} src='/img/home/trigo.svg' alt='lead' />
+                    <img className={styles.trigoLead} src='./img/home/trigo.svg' alt='lead' />
                   </div>
                   <div className={styles.box2Fil} >
-                    <img className={styles.lead} src='/img/base/lead.svg' alt='lead' />
+                    <img className={styles.lead} src='./img/base/lead.svg' alt='lead' />
                   </div>
                   <div className={styles.box2Fil2} ></div>
                   <p className={styles.content} >Postem lam a nimus, conecab oribus restorr umquisqui</p>
@@ -81,7 +81,7 @@ function HomePage() {
               <Link to="#">
                 <div className={styles.box3} >
                   <p>Les excearcimus autate cor aut harionemquam  aliquam, ent omnis desti derm ipitiatur sanimus  as aliquam.</p>
-                  <img className={styles.lead} src='/img/base/lead.svg' alt='lead' />
+                  <img className={styles.lead} src='./img/base/lead.svg' alt='lead' />
                   <div className={styles.box3Fil} ></div>
                 </div>
               </Link>
@@ -93,7 +93,7 @@ function HomePage() {
                   </div>
 
                   <div className={styles.box4Fil} >
-                    <img className={styles.lead} src='/img/base/lead.svg' alt='lead' />
+                    <img className={styles.lead} src='./img/base/lead.svg' alt='lead' />
                   </div>
                 </div>
               </Link>

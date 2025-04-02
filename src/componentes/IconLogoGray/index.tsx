@@ -6,7 +6,7 @@ interface DynamicTextProps {
 const IconLogo: React.FC<DynamicTextProps> = ({ localClass }) => {
     return (
         <>
-            <img className={localClass} src="/img/logo/inpEV_logo.png" alt='logo inpev' />
+            <img className={localClass} src="./img/logo/inpEV_logo.png" alt='logo inpev' />
         </>
     )
 }
