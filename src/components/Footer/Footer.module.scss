@@ -1,16 +1,20 @@
 .footer {
-    border-top: solid 3px var(--clr-turq1);
-    background-color: #fff;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 10px;
-}
+    // border-top: solid 3px var(--clr-turq1);
 
-@media (min-width: 1020px) {
-    .footer {
+    .line1, .line2 {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 10px;
+    }
+    
+    .line1{
         background-color: var(--clr-turq1);
-        color: #fff;
+    }
+
+    .line2{
+        background-color: #fff;
     }
 }
+

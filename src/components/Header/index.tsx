@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from './Header.module.scss';
+import stylesHd from './Header.module.scss';
 import IconLogoGray from '../IconLogoGray';
 import SocialList from '../SocialList';
 import NavBar from '../NavBar';
@@ -11,15 +11,15 @@ const Header = () => {
   const fecharMenu = () => setMenuAberto(false); // Função para fechar o menu
 
   return (
-    <section className={styles.header}>
+    <section className={stylesHd.header}>
 
       {/* Linha 1 */}
       <div className='bg-white'>
         <div className='relativeNov' >
-          <div className={` ${styles.line1} grid grid-cols-2 md:grid-cols-[1fr_2fr_1fr] gap-4 py-4 `}>
-            <IconLogoGray localClass={styles.Logo} />
+          <div className={` ${stylesHd.line1} grid grid-cols-2 md:grid-cols-[1fr_2fr_1fr] gap-4 py-4 `}>
+            <IconLogoGray localClass={stylesHd.Logo} />
             <div className='desk-only' >
-              <p className={` ${styles.title} text-xl `}>
+              <p className={` ${stylesHd.title} text-xl `}>
                 Relatório de Sustentabilidade <span>2024</span>
               </p>
             </div>
@@ -31,9 +31,9 @@ const Header = () => {
             </div>
 
             <div className='mobile-only' >
-                <a className="_turq1 float-right text-right" href="./en/index.html">
-                  EN (Summarized Version)
-                </a>
+              <a className="_turq1 float-right text-right" href="./en/index.html">
+                EN (Summarized Version)
+              </a>
             </div>
           </div>
         </div>
@@ -41,7 +41,7 @@ const Header = () => {
 
 
       {/* Linha 2 */}
-      <div className={` ${styles.line2} `}>
+      <div className={` ${stylesHd.line2} `}>
         <div className='relativeNov grid grid-cols-[2fr_1fr] md:grid-cols-[1fr_2fr_1fr] gap-4 py-4 items-center ' >
           <div className='mobile-only' >
             <p className="text-white font-bold " >
@@ -50,7 +50,7 @@ const Header = () => {
           </div>
 
           {/* Col 1 */}
-          <div className={styles.div1Left} >
+          <div className={stylesHd.div1Left} >
             {/* Botão hambúrguer com texto "Menu" */}
             <button
               className="flex items-center gap-2 text-white self-end"
@@ -76,8 +76,8 @@ const Header = () => {
 
           {/* Col 2 */}
           <div className='desk-only' >
-            <a className={styles.downA} href="./assets/download/#" target="_blank">
-              <div className={` ${styles.download} gap-2 text-white `}>
+            <a className={stylesHd.downA} href="./assets/download/#" target="_blank">
+              <div className={` ${stylesHd.download} gap-2 text-white `}>
                 <img src="./img/header/download.svg" alt="logo" />
                 PDF completo
               </div>
@@ -98,7 +98,12 @@ const Header = () => {
 
       {/* Passando o estado para o NavBar */}
       <div className={`transition-all duration-300 ${menuAberto ? 'opacity-100 visible' : 'opacity-0 invisible'} `}>
-        <NavBar isOpen={menuAberto} fecharMenu={fecharMenu} />
+        <NavBar
+          isOpen={menuAberto}
+          fecharMenu={fecharMenu}
+          gridClass="grid-cols-1"
+          hasExtraClass={true}
+        />
       </div>
     </section>
   );
