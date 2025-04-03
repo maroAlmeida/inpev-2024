@@ -3,7 +3,7 @@
     .homeBg {
         background-image: url(./img/foto1-mb.jpg);
         background-size: 100% auto;
-        background-position-y: 140px;
+        background-position-y: 27%;
         position: relative;
     }
 
@@ -53,7 +53,6 @@
             h1 {
                 font-size: 18px;
                 font-weight: 500;
-                text-align: left;
                 display: block;
                 margin: auto;
             }
@@ -100,7 +99,6 @@
             color: var(--clr-turq1);
             font-weight: 600;
             font-size: 30px;
-            margin-top: 20px;
         }
 
         .tmPdts {
@@ -241,6 +239,13 @@
                     }
                 }
 
+                .leadBco{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 30px;
+                }
+
             }
 
             .itemRdp:hover {
@@ -255,6 +260,13 @@
 }
 
 @media (max-width: 1010px) {
+
+    .boxGreen {
+
+        h1 {
+            text-align: center;
+        }
+    }
 
     .homeBgLeads {
         background-image: url(./img/folhasMb.png);
@@ -418,10 +430,10 @@
                 width: 311px;
                 height: 370px;
                 padding: 6%;
+                text-align: left;
                 border: solid 3px var(--clr-turq1);
                 border-top-left-radius: 20px;
                 border-bottom-right-radius: 20px;
-                color: black;
                 background-color: #fff;
             }
 
@@ -436,9 +448,15 @@
             background-image: url(./img/folhas.png);
         }
 
+        .temasMateriais {    
+            .tmTitle {
+                margin-top: 20px;
+            }
+        }
+
         .leadsBox {
             height: 410px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
 
             .lead {
                 background-image: url('./img/lead.svg');

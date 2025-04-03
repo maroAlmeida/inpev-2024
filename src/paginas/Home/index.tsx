@@ -174,6 +174,7 @@ function HomePage() {
                       {item.percentage && <span>{item.percentage}<br /></span>}
                       {item.text}
                     </p>
+                    <img className={styles.leadBco} src="./img/home/leadBco.svg" alt="lead" />
                   </div>
                 </Link>
               ))}
