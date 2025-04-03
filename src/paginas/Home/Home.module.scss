@@ -53,8 +53,7 @@
             h1 {
                 font-size: 18px;
                 font-weight: 500;
-                text-align: center;
-                text-transform: uppercase;
+                text-align: left;
                 display: block;
                 margin: auto;
             }
@@ -68,13 +67,16 @@
                 font-family: "Cronos Pro", sans-serif;
                 text-align: center;
                 color: #000;
+                display: block;
+                margin: auto;
+                width: 90%;
 
                 p {
-                    font-size: 16px;
+                    font-size: 20px;
                 }
 
                 .msgTitle {
-                    font-size: 20px;
+                    font-size: 27px;
                     font-weight: 600;
                 }
 
@@ -93,16 +95,16 @@
 
     .temasMateriais {
         font-family: "Cronos Pro", sans-serif;
-        // padding-bottom: 300px;
 
         .tmTitle {
             color: var(--clr-turq1);
             font-weight: 600;
             font-size: 30px;
+            margin-top: 20px;
         }
 
         .tmPdts {
-            width: 420px;
+            width: 352px;
             height: 20px;
             border-top-left-radius: 20px;
             border-top: solid 3px var(--clr-turq1);
@@ -111,7 +113,7 @@
 
         .leadsBox {
             border-left: solid 3px var(--clr-turq1);
-            margin-bottom: 100px;
+            overflow: hidden;
 
             .lead {
                 width: 30px;
@@ -121,21 +123,18 @@
             }
 
             .box1,
+            .box2,
             .box3,
             .box4 {
                 min-width: 221px;
-                // height: 100%;
-                // min-height: 250px;
-                // max-height: 500px;
                 overflow: hidden;
                 position: relative;
                 background-color: transparent;
-                // background-color: rgb(202, 202, 202, 0.5);
+                color: #000;
+                line-height: 1.1;
+                font-size: 22px;
 
                 p {
-                    color: #000;
-                    font-size: 24px;
-                    line-height: 1.1;
                     display: block;
                 }
             }
@@ -144,13 +143,21 @@
             .box2:hover,
             .box3:hover,
             .box4:hover {
-                background-color: rgb(202, 202, 202, 0.5);
+                opacity: 1;
             }
 
             .box1 {
                 p {
                     background-color: var(--clr-ocre);
                     padding: 6%;
+                }
+            }
+
+            .box3:hover,
+            .box1:hover {
+                p {
+                    background-color: var(--clr-blue);
+                    color: var(--clr-white);
                 }
             }
 
@@ -165,20 +172,21 @@
 
             .box4 {
                 .flower {
-                    background-image: url(./img/cilios.svg);
-                    background-position: center;
-                    background-size: 94%;
                     padding: 6.7%;
+                    background-size: 94%;
+                    background-position: center;
+                    background-image: url(./img/cilios.svg);
 
                     p {
                         width: 180px;
                         height: 180px;
-                        background-color: var(--clr-ocre);
                         padding: 16% 6%;
                         border-radius: 50%;
                         text-align: center;
                         display: block;
                         margin: auto;
+                        z-index: 3;
+                        background-color: var(--clr-ocre);
                     }
                 }
 
@@ -190,23 +198,42 @@
                     }
                 }
             }
+
+            .box4:hover {
+                
+                .flower{
+                    background-image: url(./img/ciliosBlue.svg);
+                }
+
+                p{
+                    color: #fff;
+                    background-color: var(--clr-blue);
+                }
+            }
         }
 
 
         .tmBxRdp {
-            // background-color: #caca;
+            margin-bottom: 40px;
 
             .itemRdp {
-                background-size: 100% auto;
-                background-position: left top;
+                height: 130px;
+                color: #fff;
                 padding: 10px;
                 transform: scale(0.9);
+                border: solid 3px #fff;
+                border-top-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                background-position: center;
+                background-image: url('./img/fndblur.png');
+
+                display: flex;
+                align-items: center;
 
                 p {
                     font-size: 20px;
                     font-weight: 600;
                     line-height: 1;
-                    margin-top: 15px;
 
                     span {
                         font-size: 60px;
@@ -217,7 +244,10 @@
             }
 
             .itemRdp:hover {
-                transform: scale(1.06);
+                color: var(--clr-blue);
+                border: solid 3px var(--clr-blue);
+                background-color: rgba(255, 255, 255, 0.8);
+                background-image: none;
             }
         }
 
@@ -233,7 +263,7 @@
 
     .leadsBox {
         padding-bottom: 120px;
-        margin-bottom: 0;
+        margin-bottom: 60px;
 
         .lead {
             background-image: url('./img/leadRight.svg');
@@ -263,25 +293,38 @@
             }
         }
 
-        .box1Fil,
-        .box3Fil,
-        .box4Fil {
+        .box1 .box1Fil,
+        .box3 .box3Fil,
+        .box4 .box4Fil {
             width: 30%;
             height: 10px;
             max-height: 300px;
         }
 
-        .box1Fil,
-        .box3Fil {
+        .box1 .box1Fil,
+        .box3 .box3Fil {
             margin-top: 0px;
             margin-right: -12px;
             width: 50%;
             margin-left: -2%;
         }
 
-        .box1Fil {
+        .box1 .box1Fil {
             border-top: solid 3px var(--clr-ocre);
         }
+
+        .box3 .box3Fil {
+            border-top: solid 3px var(--clr-turq1);
+        }
+
+        .box1:hover .box1Fil {
+            border-top: solid 3px var(--clr-blue);
+        }
+
+        .box3:hover .box3Fil {
+            border-top: solid 3px var(--clr-blue);
+        }
+
 
         .box2 {
             p {
@@ -305,10 +348,6 @@
                 right: 10px;
                 top: 10px;
             }
-        }
-
-        .box3Fil {
-            border-top: solid 3px var(--clr-turq1);
         }
 
         .box4 {
@@ -342,11 +381,6 @@
 
     }
 
-    .itemRdp {
-        background-image: url('./img/fndblur.png');
-        border-radius: 20px;
-        border: solid 3px #fff
-    }
 }
 
 @media (min-width: 1020px) {
@@ -365,7 +399,7 @@
             }
 
             .boxOrange {
-                width: 202px;
+                width: 170px;
                 height: 416px;
                 padding: 8%;
                 border-left: solid 3px var(--clr-turq1);
@@ -375,28 +409,20 @@
                 h1 {
                     width: 146px;
                     font-weight: 500;
-                    font-size: 20px;
+                    font-size: 17px;
+                    text-align: left;
                 }
             }
 
             .boxGreen {
                 width: 311px;
                 height: 370px;
-                padding: 5%;
+                padding: 6%;
                 border: solid 3px var(--clr-turq1);
                 border-top-left-radius: 20px;
                 border-bottom-right-radius: 20px;
                 color: black;
                 background-color: #fff;
-
-                h1 {
-                    width: 229px;
-                    font-weight: 500;
-                    font-size: 20px;
-                    text-transform: uppercase;
-                    display: block;
-                    margin: auto;
-                }
             }
 
             .filetGreen {
@@ -412,6 +438,7 @@
 
         .leadsBox {
             height: 410px;
+            margin-bottom: 40px;
 
             .lead {
                 background-image: url('./img/lead.svg');
@@ -421,19 +448,12 @@
             .box2,
             .box3,
             .box4 {
-                min-width: 221px;
+                width: 260px;
                 min-height: 400px;
                 max-height: 500px;
                 padding: 10%;
                 overflow: hidden;
-            }
-
-            .box1:hover,
-            .box2:hover,
-            .box3:hover,
-            .box4:hover {
-                transform: scale(1.06);
-                background-color: rgb(202, 202, 202, 0.5);
+                position: relative;
             }
 
             .box1,
@@ -453,29 +473,57 @@
                 }
             }
 
+            .box1 .box1Fil,
+            .box3 .box3Fil
+            {
+                width: 51%;
+                height: 100vh;
+                margin: 0 0 0 15%;
+            }
+
+            .box1 .box1Fil {
+                border-left: solid 3px var(--clr-ocre);
+            }
+
+            .box3 .box3Fil {
+                border-left: solid 3px var(--clr-turq1);
+            }
+
+            
+            .box1:hover .box1Fil {
+                border-left: solid 3px var(--clr-blue);
+            }
+
+            .box3:hover .box3Fil {
+                border-left: solid 3px var(--clr-blue);
+            }
+
             .box2 {
                 padding-top: 25%;
+                color: #000;
+
+                p.content {
+                    border-left: solid 3px var(--clr-ocre);
+                    padding-left: 10px;
+                    width: 90%;
+                    height: 100%;
+                    margin-left: 0;
+                }
+
+                p.percent {
+                    font-size: 60px;
+                    line-height: 1;
+                    font-weight: 600;
+                }
 
                 .trigo {
                     width: 90px;
                     height: 119px;
                     margin-left: 49%;
-
-                    p {
-                        font-size: 60px;
-                        font-weight: 600;
-                        color: #000;
-                        border: none;
-                        text-align: center;
-                    }
-
-                    p.percent {
-                        line-height: 1;
-                    }
                 }
 
                 .box2Fil {
-                    width: 133px;
+                    width: 128px;
                     height: 60px;
                     border-right: solid 3px var(--clr-ocre);
                     border-bottom: solid 3px var(--clr-ocre);
@@ -500,52 +548,50 @@
                     position: relative;
                     margin-top: -3px;
                 }
+            }
 
+            .box2:hover{
                 p.content {
-                    border-left: solid 3px var(--clr-ocre);
-                    padding-left: 10px;
-                    width: 90%;
-                    height: 100%;
-                    margin-left: 0;
+                    border-left: solid 3px var(--clr-blue);
                 }
 
+                .box2Fil {
+                    border-right: solid 3px var(--clr-blue);
+                    border-bottom: solid 3px var(--clr-blue);
+                }
+
+                .box2Fil2 {
+                    border-left: solid 3px var(--clr-blue);
+                    border-top: solid 3px var(--clr-blue);
+                }
+
+                svg{
+                    fill: var(--clr-blue);
+                }
             }
 
-
-            .box1Fil,
-            .box3Fil,
-            .box4Fil {
+            .box4 .box4Fil {
                 width: 51%;
                 height: 100vh;
-                margin: 0 0 0 15%;
-            }
-
-            .box1Fil {
-                border-left: solid 3px var(--clr-ocre);
-            }
-
-            .box3Fil {
-                border-left: solid 3px var(--clr-turq1);
-            }
-
-            .box4Fil {
-                border-right: solid 3px var(--clr-ocre);
                 margin-top: -8%;
                 margin-left: 0;
                 position: relative;
+                border-right: solid 3px var(--clr-ocre);
 
                 .lead {
                     height: 30px;
-                    top: 20%;
+                    top: 10%;
                     right: 0;
                     position: absolute;
                 }
             }
 
-        }
+            .box4:hover .box4Fil {
+                border-right: solid 3px var(--clr-blue);
+            }
 
-        .itemRdp {
-            background-image: url('./img/tmFndRdp.png');
+
+
         }
 
 

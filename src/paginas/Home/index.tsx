@@ -11,8 +11,8 @@ const items = [
   { id: 4, percentage: "90%", text: "Nam vendis is ma doloratusa dit peditiu. " },
 ];
 
-const text1 = "Gestor do Sistema Campo Limpo, programa brasileiro de logística reversa de embalagens vazias de defensivos agrícolas";
-const text2 = "Introdução nam a nimus, conecab oribus restorr umquisqui ullibearum debis dolore, a num volum utae. Itam re vendaector sam voloremquia sam facea voluptaquis aut ulli bearum de";
+const text1 = "Representante da indústria fabricante de defensivos agrícolas no Sistema Campo Limpo, programa brasileiro de logística reversa";
+const text2 = "Este Relatório de Sustentabilidade 2024 apresenta os principais resultados financeiros, operacionais e socioambientais do Instituto Nacional de Processamento de Embalagens Vazias (inpEV), que integra o Sistema Campo Limpo, programa brasileiro de logística reversa de embalagens vazias ou com sobras pós-consumo de defensivos agrícolas.";
 
 const trigoPerct = "50%";
 const trigoLeg = "Postem lam a nimus, conecab oribus restorr umquisqui";
@@ -61,7 +61,7 @@ function HomePage() {
         <div className={` ${styles.linePresd} w-full`} >{/* msgPresd */}
           <div className={styles.msgPresd} >
             <p className={styles.msgTitle} >Mensagem do diretor-presidente</p>
-            <p className={styles.msgTxt} >"A robustez e a efetividade do Sistema Campo Limpo e a sua importância para a agricultura brasileira foram comprovadas mais uma vez em 2023. A operação com excelência do Sistema foi imprescindível para recebermos um volume de embalagens pós-consumo 10% superior ao registrado em 2022 e destinarmos de maneira ambientalmente correta 53,2 mil toneladas, ultrapassando a marca de 750 mil toneladas destinadas desde 2002."</p>
+            <p className={styles.msgTxt} >"Esta é a versão resumida do Relatório de Sustentabilidade 2024 do Instituto Nacional de Processamento de Embalagens Vazias (inpEV), que reúne os principais resultados operacionais, financeiros e socioambientais do ano do Sistema Campo Limpo. O documento é publicado anualmente desde 2002, uma demonstração do comprometimento do Instituto com a transparência e a prestação de contas para com todos os elos da cadeia agrícola. <br />Boa leitura!"</p>
             <p >Marcelo Okamura <i>Diretor-presidente do inpEV</i> </p>
 
             <Link className={styles.msgLink} to="/mensagempresidente">Leia a mensagem completa!</Link>
@@ -94,7 +94,23 @@ function HomePage() {
                   <div className="desk-only vh100" >
                     <div className={styles.trigo} >
                       <p className={styles.percent} >{trigoPerct}</p>
-                      <img src="./img/home/trigo.svg" alt="trigo" />
+
+                      <svg
+                        width="89"
+                        height="60"
+                        viewBox="0 0 89 60"
+                        fill="#9ca94e"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M45.76 9.09C45.76 4.07 49.84 0 54.88 0H89.02V9.09C89.02 14.11 84.94 18.18 79.9 18.18H45.76V9.09Z" />
+                        <path d="M43.26 9.09C43.26 4.07 39.18 0 34.14 0H0V9.09C0 14.11 4.08 18.18 9.12 18.18H43.26V9.09Z" />
+                        <path d="M45.76 30.01C45.76 24.99 49.84 20.92 54.88 20.92H89.02V30.01C89.02 35.03 84.94 39.1 79.9 39.1H45.76V30.01Z" />
+                        <path d="M43.26 30.01C43.26 24.99 39.18 20.92 34.14 20.92H0V30.01C0 35.03 4.08 39.1 9.12 39.1H43.26V30.01Z" />
+                        <path d="M45.76 50.91C45.76 45.89 49.84 41.82 54.88 41.82H89.02V50.91C89.02 55.93 84.94 60 79.9 60H45.76V50.91Z" />
+                        <path d="M43.26 50.91C43.26 45.89 39.18 41.82 34.14 41.82H0V50.91C0 55.93 4.08 60 9.12 60H43.26V50.91Z" />
+                      </svg>
+
+
                     </div>
                     <div className={styles.box2Fil} >
                       <div className={styles.lead} ></div>
@@ -154,9 +170,8 @@ function HomePage() {
                     className={`${styles.itemRdp} transition-opacity duration-300`}
                     style={{ opacity: hovered === null || hovered === item.id ? 1 : 0.9 }}
                   >
-                    <p className="text-white">
-                      {item.percentage && <span>{item.percentage}</span>}
-                      <br />
+                    <p className="">
+                      {item.percentage && <span>{item.percentage}<br /></span>}
                       {item.text}
                     </p>
                   </div>

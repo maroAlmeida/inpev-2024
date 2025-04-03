@@ -22,12 +22,12 @@
     }
 
     .textHover {
-        color: var(--clr-orange);
+        color: var(--clr-blue);
         transition: color 0.3s ease;
     }
 
     .iconHover, .iconHover circle {
-        fill: var(--clr-orange);
+        fill: var(--clr-blue);
         transition: fill 0.3s ease;
     }
 
